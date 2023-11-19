@@ -8,7 +8,7 @@ from pages.model_2.preproccesing import preprocess
 def load_model():
     model = resnet50()
     model.fc = torch.nn.Linear(in_features=2048, out_features=6)
-    weights = torch.load('C:\ds_bootcamp\Проекты\Classifications\pages\model_2\savemodel.pt')
+    weights = torch.load('pages\model_2\savemodel.pt')
 
     model.load_state_dict(weights)
 
@@ -19,7 +19,6 @@ def load_model():
 model = load_model()
 
 image = st.file_uploader('Загрузите картинку')
-url = st.text_input('Введите URL картинки') 
 
 
 def predict(img):
