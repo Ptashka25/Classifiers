@@ -8,7 +8,7 @@ from pages.model_2.preproccesing import preprocess
 def load_model():
     model = resnet50()
     model.fc = torch.nn.Linear(in_features=2048, out_features=1)
-    weights = torch.load('C:\ds_bootcamp\Проекты\Classifications\pages\model_3\savemodel3.pt')
+    weights = torch.load('pages\model_3\savemodel3.pt')
 
     model.load_state_dict(weights)
 
