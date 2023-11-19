@@ -25,7 +25,7 @@ def predict(img):
     return pred
 
 
-labels = json.load(open('C:\ds_bootcamp\Проекты\Classifications\pages\model_1\imagenet_class_index.json'))
+labels = json.load(open('pages\model_1\imagenet_class_index.json'))
 decode = lambda x: labels[str(x)][1]
 
 if image:
